@@ -1,0 +1,6 @@
+# Python_Bot-Python-Voice-Assistant
+
+It's a voice assistant ape used to perform some of specific commands we defined for example if you need to search something like a general knowledge questions if we defined what's on it
+otherwise he deserves on Wikipedia or Google it's not a complete application is just a API code return on python language.....
+
+as soon as possible I updated the code.....
