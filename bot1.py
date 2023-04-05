@@ -30,8 +30,8 @@ def music():
 
 def work(inp):
 
-    if "diva" in inp:
-        speak("hai iam hear iam happy to help you Dear")
+    if "sara" in inp:
+        speak("Hey iam Sara iam happy to help you Dear")
 
     elif 'music' in inp:
             speak("playing music ")
@@ -39,7 +39,7 @@ def work(inp):
             music()
             exit()
 
-            
+     
     elif "wind up" in inp:
         speak("thank you have a nice day")
         exit()
@@ -53,6 +53,7 @@ def work(inp):
     
     elif "facebook" in inp:
         webbrowser.open('facebook.com')
+        speak("Iam happy to help you thankyou.. enjoy your moment with facebook ")
         exit()
 
     elif "default" in inp:
@@ -64,24 +65,27 @@ def work(inp):
         loc="C:\\Program Files\\Adobe\\Adobe Photoshop CS6 (64 Bit)\\Photoshop.exe"
         os.startfile(loc)
         exit()
+
+    elif "google" in inp:
+        speak("opening webpage")
+        webbrowser.open(inp)
     
     else :
-        speak("if you want to search in wikipedia say yes ")
-        speak("if you want to search in google say ok ")
-        option=hear().lower()
-        if "yes"in option:
+        # speak("if you want to search in wikipedia say wikipedia ")
+        # speak("if you want to search in google say google ")
+        # option=hear().lower()
+        # if "wikipedia"in option:
             speak(wikipedia.summary(inp, sentences=4))
-        if "ok"in option:
-            speak("opening webpage")
-            webbrowser.open(inp)
+        # if "google"in option:
+        #     speak("opening webpage")
+        #     webbrowser.open(inp)
 
            
 
 if __name__ == "__main__":
-    speak("hai i am  D iam a chatbot happy to assist you")
-
+    speak("hai i am sara iam a chatbot happy to assist you")
     while True: 
-        speak("speak")   
+        # speak("speak")   
         inp=hear().lower()
         work(inp)
         
