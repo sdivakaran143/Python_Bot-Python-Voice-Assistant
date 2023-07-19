@@ -1,6 +1,6 @@
 import speech_recognition as sr
 import pyttsx3,os,random,time,webbrowser,wikipedia 
-
+from tkinter import *
 engine = pyttsx3.init()
 voices = engine.setProperty("rate",115)
 
@@ -63,40 +63,27 @@ def work(inp):
             webbrowser.open(inp)
          
 
-if __name__ == "__main__":
+def handle_button_start(event):
+    print("hello")
     speak("hai i am sara iam a chatbot happy to assist you")
-    while True: 
-        # speak("speak")   
-        inp=hear().lower()
-        work(inp)
+    speak("speak")   
+    inp=hear().lower()
+    work(inp)
+
+def handle_button_press(event):
+    window.destroy()
 
 
-#import tkinter as tk
-
-# def handle_button_press(event):
-#     window.destroy()
-
-# def handle_button_start(event):
-#     while True :
-#         user_input=input("enter :")
-#         work(user_input)
-
-
-# window = tk.Tk()
-# window.title("Hello World")
-
-# entry = tk.Entry(window)
-# entry.pack()
-
-# button1 = tk.Button(window, text="Start")
-# button1.bind("<Button-1>", handle_button_start)
-# button1.pack()
-
-# button = tk.Button(window, text="End")
-# button.bind("<Button-1>", handle_button_press)
-# button.pack()
-
-# # Start the event loop.
-# window.mainloop()
-
-        
+window=Tk()
+window.title("Voice Assistant")
+window.minsize(100,50)
+window.maxsize(200,100)
+window.geometry("300x150+550+250")
+text1=Label(window,text="Click start")
+text1.pack()
+button1=Button(window, text="Start")
+button1.bind("<Button-1>",handle_button_start)
+button1.pack()
+button2 =Button(window, text=" Exit ",command=window.quit)
+button2.pack()
+window.mainloop()
