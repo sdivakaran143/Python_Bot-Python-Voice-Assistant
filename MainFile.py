@@ -69,4 +69,34 @@ if __name__ == "__main__":
         # speak("speak")   
         inp=hear().lower()
         work(inp)
+
+
+#import tkinter as tk
+
+# def handle_button_press(event):
+#     window.destroy()
+
+# def handle_button_start(event):
+#     while True :
+#         user_input=input("enter :")
+#         work(user_input)
+
+
+# window = tk.Tk()
+# window.title("Hello World")
+
+# entry = tk.Entry(window)
+# entry.pack()
+
+# button1 = tk.Button(window, text="Start")
+# button1.bind("<Button-1>", handle_button_start)
+# button1.pack()
+
+# button = tk.Button(window, text="End")
+# button.bind("<Button-1>", handle_button_press)
+# button.pack()
+
+# # Start the event loop.
+# window.mainloop()
+
         
