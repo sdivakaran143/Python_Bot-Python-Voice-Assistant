@@ -18,7 +18,7 @@ def hear():
         print("You said ",audio)
         return audio
     except:
-        print("could not understand your audio")
+        speak("could not understand your audio, retry")
         return "default"
 
 def music():
@@ -58,22 +58,21 @@ def work(inp):
     
     else :
         try:
-            speak(wikipedia.summary(inp, sentences=4))
+            speak(wikipedia.summary(inp, sentences=3))
         except:
             webbrowser.open(inp)
          
 
 def handle_button_start(event):
-    print("hello")
-    speak("hai i am sara iam a chatbot happy to assist you")
     speak("speak")   
     inp=hear().lower()
     work(inp)
+    speak("End of the Result")   
 
 def handle_button_press(event):
     window.destroy()
 
-
+speak("hai i am sara iam a chatbot happy to assist you")
 window=Tk()
 window.title("Voice Assistant")
 window.minsize(100,50)
