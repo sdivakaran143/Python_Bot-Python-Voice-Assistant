@@ -9,3 +9,16 @@ It's on a basic API court returns using speech recognition python text to speech
 
 In future i'm in idea to implement for the mobile devices 
 thank you . . .
+
+
+Download the code. and download some necessary pip Run the code.
+
+The important pips are 
+> SpeechRecognition.
+> pyAudio
+> wikipedia
+> pyttsx3
+> os
+> random
+> time
+> webbrowser
